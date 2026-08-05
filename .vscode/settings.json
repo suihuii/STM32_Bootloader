@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build/Debug",
+        "--query-driver=/opt/st/stm32cubeclt_1.21.0/GNU-tools-for-STM32/bin/arm-none-eabi-*"
+    ]
+}
