@@ -44,12 +44,15 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user sources here
+    User/composition/bootloader_composition.c
+    User/runtime/bootloader_runtime.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/common
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/composition
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/runtime
 )
 
 # Add project symbols (macros)

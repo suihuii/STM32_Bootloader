@@ -26,7 +26,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "bootloader_composition.h"
+#include "bootloader_runtime.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,13 +90,9 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_USART1_UART_Init();
-  MX_CRC_Init();
-  MX_IWDG_Init();
+  
   /* USER CODE BEGIN 2 */
-
+  bootloader_composition_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,7 +100,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    bootloader_runtime_step();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
