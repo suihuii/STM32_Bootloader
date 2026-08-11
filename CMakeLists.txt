@@ -46,6 +46,13 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     User/composition/bootloader_composition.c
     User/runtime/bootloader_runtime.c
+
+    # BSP
+    User/bsp/bsp_crc.c
+    User/bsp/bsp_uart.c
+    User/bsp/bsp_flash.c
+    User/bsp/bsp_watchdog.c
+    User/bsp/bsp_system.c
 )
 
 # Add include paths
@@ -53,6 +60,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/User/common
     ${CMAKE_CURRENT_SOURCE_DIR}/User/composition
     ${CMAKE_CURRENT_SOURCE_DIR}/User/runtime
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/bsp
 )
 
 # Add project symbols (macros)
